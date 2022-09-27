@@ -1,0 +1,324 @@
+*
+  box-sizing: border-box
+
+@import normalize_scss
+@import reset_scss
+
+@font-face
+  font-family: Gilroy-Bold
+  font-display: swap
+  src: url(../fonts/Gilroy-Bold.ttf)
+
+@font-face
+  font-family: Gilroy-Medium
+  font-display: swap
+  src: url(../fonts/Gilroy-Medium.ttf)
+
+.container
+  max-width: 940px
+  margin: 0 auto
+  position: relative
+
+.nav-menu
+  &_list
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    margin-bottom: 32px
+  &_list-item
+    font-size: 18px
+  a
+    text-decoration: none
+    color: #828282
+    font-family: Gilroy-Bold, serif
+  a:hover
+    color: black
+  &_hr
+    width: 940px
+    margin-bottom: 40px
+.text-nav
+  display: none
+  color: #828282
+  transform: rotate(90deg)
+  font-family: Gilroy-Bold, serif
+  font-size: 30px
+  span
+    color: black
+
+.main-section
+  position: relative
+  min-height: 770px
+  background-color: white
+  padding-top: 33px
+  &_box
+    display: flex
+    justify-content: space-between
+    &_title
+      font-size: 47px
+      font-family: Gilroy-Bold, serif
+    &_text
+      font-size: 18px
+      padding-top: 55px
+      font-family: Gilroy-Medium, serif
+    &_text-2
+      font-size: 16px
+      color: #828282
+      transform: rotate(-90deg)
+      padding-top: 76px
+      padding-right: 27px
+      font-family: Gilroy-Bold, serif
+      span
+        color: black
+    &_img
+      position: absolute
+      top: 227px
+      width: 943px
+    &_img-2
+      display: none
+
+.second-section
+  min-height: 506px
+  background: #F6F6F6
+  &_container
+    display: flex
+    &_box
+      display: flex
+      flex-direction: column
+      text-align: center
+      padding: 133px 0 0 225px
+      &_title
+        font-size: 34px
+        margin-bottom: 18px
+        font-family: Gilroy-Bold, serif
+      &_text
+        font-size: 18px
+        font-family: Gilroy-Medium, serif
+      p
+        margin-bottom: 40px
+        &:last-child
+          margin-bottom: 0
+
+.br-mobile
+  display: none
+
+.third-section
+  position: relative
+  min-height: 610px
+  background: white
+  padding-top: 91px
+  &_container
+    display: flex
+    flex-direction: column
+
+.up-wrapper
+  text-align: center
+  &_title
+    font-size: 34px
+    margin-bottom: 69px
+    font-family: Gilroy-Bold, serif
+  &_text
+    font-size: 18px
+    margin-bottom: 84px
+    font-family: Gilroy-Medium, serif
+
+.down-wrapper
+  &_icon
+    margin-right: 86px
+    &:last-child
+      margin-right: 0
+
+.fourth-section
+  min-height: 2253px
+  background: #F6F6F6
+  padding-top: 113px
+  &_container
+    h4
+      text-align: center
+      margin-bottom: 47px
+      font-size: 34px
+      font-family: Gilroy-Bold, serif
+    img
+      margin-bottom: 45px
+    p
+      text-align: center
+      font-size: 18px
+      text-decoration-line: underline
+      font-family: Gilroy-Medium, serif
+    &_text
+      margin-bottom: 99px
+
+.footer
+  min-height: 622px
+  background: white
+  padding-top: 114px
+  position: relative
+  &_container
+    text-align: center
+    h5
+      margin-bottom: 20px
+      font-size: 34px
+      font-family: Gilroy-Bold, serif
+    &_text
+      margin-bottom: 30px
+      font-size: 18px
+      font-family: Gilroy-Medium, serif
+  &_button
+    width: 180px
+    height: 42px
+    border-radius: 100px
+    background: #070707
+    color: white
+    font-size: 18px
+    margin-bottom: 86px
+    font-family: Gilroy-Bold, serif
+  &_icon-box
+    width: 342px
+    height: 120px
+    position: absolute
+    right: 299px
+    &_icons
+      display: flex
+      justify-content: space-between
+      margin-bottom: 45px
+    p
+      color: #828282
+      font-family: Gilroy-Medium, serif
+
+@media ( max-width: 575px)
+  .container
+    width: 100%
+  .nav-menu
+    position: fixed
+    right: -100%
+    top: 0
+    height: 100%
+    width: 375px
+    background: #ffffff
+    z-index: 20
+    transition: 0.4s all
+    padding-left: 7%
+    padding-top: 18%
+    opacity: 0.9
+    &_list
+      flex-direction: column
+    &_list-item
+      margin-right: 0
+      font-size: 30px
+      margin-bottom: 12%
+  .hamburger
+    width: 40px
+    height: 30px
+    position: absolute
+    top: 81px
+    right: 27px
+    z-index: 30
+    span
+      height: 4px
+      width: 90%
+      display: block
+      background: #3C3C3C
+      margin-bottom: 4px
+      transition: 0.4s all
+      &:last-child
+        margin-bottom: 0
+  .hamburger_active
+    top: 87px
+    position: fixed
+    span
+      margin-bottom: -4px
+      &:nth-child(1)
+        transform: translateY(3px) rotate(-45deg)
+      &:nth-child(2)
+        display: none
+      &:nth-child(3)
+        transform: translateY(3px) rotate(45deg)
+  .nav-menu_active
+    display: block
+    right: 0
+
+  .text-nav
+    display: block
+    position: absolute
+    top: 80%
+    right: -6%
+
+
+  .nav-menu_hr
+    display: none
+
+
+
+  .main-section
+    padding-top: 18%
+    min-height: 836px
+    &_box
+      flex-direction: column
+      padding: 0 7% 0 7%
+      &_text
+        padding-top: 23px
+        margin-bottom: 36px
+      &_text-2
+        display: none
+      &_img
+        display: none
+      &_img-2
+        display: block
+  .second-section
+    min-height: 491px
+    padding-top: 81px
+    padding-left: 10%
+    &_container
+      &_box
+        padding: 0
+        &_title
+          margin-bottom: 35px
+        p
+          margin-bottom: 50px
+  .br_none
+    display: none
+  .br-mobile
+    display: block
+
+  .third-section
+    min-height: 1421px
+    padding-top: 75px
+
+  .down-wrapper
+    position: relative
+    &_icon
+      position: absolute
+      left: 28%
+  .ai
+    top: 288px
+  .ae
+    top: 576px
+  .fg
+    top: 864px
+
+  .fourth-section
+    min-height: 1118px
+    padding-top: 85px
+    h4
+      margin-bottom: 67px
+    img
+      width: 345px
+      padding: 0 0 0 8%
+      margin-bottom: 33px
+    p
+      margin-bottom: 78px
+
+  .footer
+    min-height: 569px
+    padding-top: 82px
+    h5
+      margin-bottom: 27px
+    p
+      margin-bottom: 40px
+    &_button
+      width: 316px
+    &_icon-box
+      width: 315px
+      right: 28px
+      &_icons
+        margin-bottom: 50px
+
