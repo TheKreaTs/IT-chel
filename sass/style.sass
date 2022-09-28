@@ -60,21 +60,33 @@
       font-size: 18px
       padding-top: 55px
       font-family: Gilroy-Medium, serif
-    &_text-2
-      font-size: 16px
-      color: #828282
-      transform: rotate(-90deg)
-      padding-top: 76px
-      padding-right: 27px
-      font-family: Gilroy-Bold, serif
-      span
-        color: black
     &_img
       position: absolute
       top: 227px
       width: 943px
     &_img-2
       display: none
+.language
+  display: flex
+  flex-direction: row
+  transform: rotate(-90deg)
+  padding: 78px 30px 0 0
+  &_text
+    text-decoration: none
+    font-size: 16px
+    color: #828282
+    font-family: Gilroy-Bold, serif
+  a:hover
+    color: black
+  p
+    font-size: 4px
+    span
+      color: black
+      font-size: 16px
+      width: 3px
+      font-family: Gilroy-Bold, serif
+.text2
+  color: black
 
 .second-section
   min-height: 506px
@@ -192,7 +204,7 @@
     right: -100%
     top: 0
     height: 100%
-    width: 375px
+    width: 100%
     background: #ffffff
     z-index: 20
     transition: 0.4s all
@@ -201,6 +213,8 @@
     opacity: 0.9
     &_list
       flex-direction: column
+      p:hover
+        color: black
     &_list-item
       margin-right: 0
       font-size: 30px
@@ -210,7 +224,7 @@
     height: 30px
     position: absolute
     top: 81px
-    right: 27px
+    right: 7%
     z-index: 30
     span
       height: 4px
@@ -242,11 +256,8 @@
     top: 80%
     right: -6%
 
-
   .nav-menu_hr
     display: none
-
-
 
   .main-section
     padding-top: 18%
@@ -257,12 +268,12 @@
       &_text
         padding-top: 23px
         margin-bottom: 36px
-      &_text-2
-        display: none
       &_img
         display: none
       &_img-2
         display: block
+  .language
+    display: none
   .second-section
     min-height: 491px
     padding-top: 81px
